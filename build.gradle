@@ -1,0 +1,34 @@
+plugins {
+    id "fabric-loom" version "1.0-SNAPSHOT"
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+archivesBaseName = "enderbook-integration"
+version = "1.0.0"
+group = "com.enderbook"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft group: "com.mojang", name: "minecraft", version: project.minecraft_version
+    mappings group: "net.fabricmc", name: "yarn", version: project.yarn_mappings, classifier: "v2"
+
+    modImplementation group: "net.fabricmc", name: "fabric-loader", version: project.loader_version
+    modImplementation group: "net.fabricmc.fabric-api", name: "fabric-api", version: project.fabric_version
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+java {
+    // withSourcesJar()
+}

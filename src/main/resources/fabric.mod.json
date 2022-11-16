@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "enderbook",
+  "version": "${version}",
+
+  "name": "Enderbook Integration",
+  "description": "The Enderbook Minecraft integration mod for Fabric.",
+  "authors": [
+  ],
+  "contact": {
+    "homepage": "https://enderbook.com/",
+    "sources": "https://github.com/EnderbookMCA/enderbook_fabric/"
+  },
+
+  "license": "MIT",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.enderbook.fabric.EnderbookMod"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+}
