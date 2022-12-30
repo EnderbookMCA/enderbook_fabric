@@ -1,0 +1,6 @@
+{
+  "enderbook.apikey.prompt": "Enter API Key:",
+  "enderbook.apikey.login": "Login",
+
+  "enderbook.message.auth_failure": "Authentication failure. Make sure you copied or typed out your API key correctly."
+}
